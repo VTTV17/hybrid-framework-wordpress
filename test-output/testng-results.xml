@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="0" total="7" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="77472" started-at="2021-02-02T14:36:59Z" finished-at="2021-02-02T14:38:16Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="77472" started-at="2021-02-02T14:36:59Z" finished-at="2021-02-02T14:38:16Z">
+      <class name="com.wordpress.posts.Level_02_Login_BasePage_01">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.wordpress.posts.Level_02_Login_BasePage_01@536aaa8d]" name="beforeClass" is-config="true" duration-ms="18115" started-at="2021-02-02T14:36:59Z" finished-at="2021-02-02T14:37:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.wordpress.posts.Level_02_Login_BasePage_01@536aaa8d]" name="beforeMethod" is-config="true" duration-ms="4799" started-at="2021-02-02T14:37:17Z" finished-at="2021-02-02T14:37:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="Login_01_Empty_Email_Username()[pri:0, instance:com.wordpress.posts.Level_02_Login_BasePage_01@536aaa8d]" name="Login_01_Empty_Email_Username" duration-ms="739" started-at="2021-02-02T14:37:22Z" finished-at="2021-02-02T14:37:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login_01_Empty_Email_Username -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.wordpress.posts.Level_02_Login_BasePage_01@536aaa8d]" name="beforeMethod" is-config="true" duration-ms="3242" started-at="2021-02-02T14:37:22Z" finished-at="2021-02-02T14:37:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="Login_02_Invalid_Email()[pri:0, instance:com.wordpress.posts.Level_02_Login_BasePage_01@536aaa8d]" name="Login_02_Invalid_Email" duration-ms="3935" started-at="2021-02-02T14:37:26Z" finished-at="2021-02-02T14:37:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login_02_Invalid_Email -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.wordpress.posts.Level_02_Login_BasePage_01@536aaa8d]" name="beforeMethod" is-config="true" duration-ms="3361" started-at="2021-02-02T14:37:29Z" finished-at="2021-02-02T14:37:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="Login_03_Username_Not_Exist()[pri:0, instance:com.wordpress.posts.Level_02_Login_BasePage_01@536aaa8d]" name="Login_03_Username_Not_Exist" duration-ms="3593" started-at="2021-02-02T14:37:33Z" finished-at="2021-02-02T14:37:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login_03_Username_Not_Exist -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.wordpress.posts.Level_02_Login_BasePage_01@536aaa8d]" name="beforeMethod" is-config="true" duration-ms="3119" started-at="2021-02-02T14:37:36Z" finished-at="2021-02-02T14:37:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="Login_04_Empty_Password()[pri:0, instance:com.wordpress.posts.Level_02_Login_BasePage_01@536aaa8d]" name="Login_04_Empty_Password" duration-ms="4138" started-at="2021-02-02T14:37:40Z" finished-at="2021-02-02T14:37:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login_04_Empty_Password -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.wordpress.posts.Level_02_Login_BasePage_01@536aaa8d]" name="beforeMethod" is-config="true" duration-ms="2613" started-at="2021-02-02T14:37:44Z" finished-at="2021-02-02T14:37:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="Login_05_Invalid_Password()[pri:0, instance:com.wordpress.posts.Level_02_Login_BasePage_01@536aaa8d]" name="Login_05_Invalid_Password" duration-ms="4419" started-at="2021-02-02T14:37:46Z" finished-at="2021-02-02T14:37:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login_05_Invalid_Password -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.wordpress.posts.Level_02_Login_BasePage_01@536aaa8d]" name="beforeMethod" is-config="true" duration-ms="2859" started-at="2021-02-02T14:37:51Z" finished-at="2021-02-02T14:37:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="Login_06_Incorrect_Password()[pri:0, instance:com.wordpress.posts.Level_02_Login_BasePage_01@536aaa8d]" name="Login_06_Incorrect_Password" duration-ms="4234" started-at="2021-02-02T14:37:54Z" finished-at="2021-02-02T14:37:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login_06_Incorrect_Password -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.wordpress.posts.Level_02_Login_BasePage_01@536aaa8d]" name="beforeMethod" is-config="true" duration-ms="2565" started-at="2021-02-02T14:37:58Z" finished-at="2021-02-02T14:38:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="Login_07_Valid_Email_Password()[pri:0, instance:com.wordpress.posts.Level_02_Login_BasePage_01@536aaa8d]" name="Login_07_Valid_Email_Password" duration-ms="15636" started-at="2021-02-02T14:38:00Z" finished-at="2021-02-02T14:38:16Z">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[element not interactable
+  (Session info: chrome=88.0.4324.104)
+Build info: version: '3.9.1', revision: '63f7b50', time: '2018-02-07T22:42:28.403Z'
+System info: host: 'ADMIN-PC', ip: '192.168.1.66', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_45'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.104, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Users\admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50535}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: b1f02d3610e816589d538344cc0db432]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=88.0.4324.104)
+Build info: version: '3.9.1', revision: '63f7b50', time: '2018-02-07T22:42:28.403Z'
+System info: host: 'ADMIN-PC', ip: '192.168.1.66', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_45'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.104, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Users\admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50535}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: b1f02d3610e816589d538344cc0db432
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:100)
+at commons.BasePage.sendKeyToElement(BasePage.java:100)
+at com.wordpress.posts.Level_02_Login_BasePage_01.Login_07_Valid_Email_Password(Level_02_Login_BasePage_01.java:117)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login_07_Valid_Email_Password -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.wordpress.posts.Level_02_Login_BasePage_01@536aaa8d]" name="afterClass" is-config="true" duration-ms="1" started-at="2021-02-02T14:38:16Z" finished-at="2021-02-02T14:38:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.wordpress.posts.Level_02_Login_BasePage_01 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

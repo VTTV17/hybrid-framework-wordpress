@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <test thread-count="5" name="Run on chrome(failed)">
+    <classes>
+      <class name="com.wordpress.posts.Level_01_Login_Wordpress_Yourself">
+        <methods>
+          <include name="Login_05_Invalid_Password"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="Login_04_Empty_Password"/>
+          <include name="afterClass"/>
+          <include name="Login_06_Incorrect_Password"/>
+          <include name="Login_07_Valid_Email_Password"/>
+        </methods>
+      </class> <!-- com.wordpress.posts.Level_01_Login_Wordpress_Yourself -->
+    </classes>
+  </test> <!-- Run on chrome(failed) -->
+</suite> <!-- Failed suite [Suite] -->

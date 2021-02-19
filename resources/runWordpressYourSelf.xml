@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+  <test name="Run on chrome">
+    <classes>
+      <class name="com.wordpress.posts.Level_01_Login_Wordpress_Yourself"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

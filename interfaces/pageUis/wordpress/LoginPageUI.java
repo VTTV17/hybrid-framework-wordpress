@@ -1,4 +1,4 @@
-package pageUis;
+package pageUis.wordpress;
 
 public class LoginPageUI {
 	public static final String USERNAME_EMAIL_TEXTBOX="//input[@id='usernameOrEmail']";

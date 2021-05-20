@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Data tabel" parallel="false">
+<parameter name="url" value="http://demo.nopcommerce.com/" />
+  <test name="Run on chrome">
+  <parameter name="browser" value="chrome" />
+    <classes>
+      <class name="com.jquery.table.Level_09_DataTable"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

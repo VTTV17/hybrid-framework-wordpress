@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+<parameter name="url" value="http://automationfc.wordpress.com/wp-admin" />
+
+	<test name="Run on FIREFOX">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="com.wordpress.posts.Level_04_Multiple_Browser" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="Run on CHROME">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.wordpress.posts.Level_04_Multiple_Browser" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="Run on EDGE">
+		<parameter name="browser" value="edge" />
+		<classes>
+			<class name="com.wordpress.posts.Level_04_Multiple_Browser" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

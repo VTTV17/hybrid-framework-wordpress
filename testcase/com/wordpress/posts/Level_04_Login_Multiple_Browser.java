@@ -1,25 +1,32 @@
 package com.wordpress.posts;
 
+import org.testng.annotations.Test;
+
+import com.beust.jcommander.Parameter;
+
+import commons.BaseTest;
+import pageObjects.wordpress.DashboardPageObject;
+import pageObjects.wordpress.LoginPageObject;
+
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
+
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
+import javax.management.RuntimeErrorException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
 
-import commons.BasePage;
-import pageObjects.wordpress.DashboardPageObject;
-import pageObjects.wordpress.LoginPageObject;
-import pageUis.wordpress.LoginPageUI;
-
-public class Level_03_Login_BasePage_01{
+public class Level_04_Login_Multiple_Browser extends BaseTest{
 	WebDriver driver;
 	String projectLocation= System.getProperty("user.dir");
 	LoginPageObject loginPage;
@@ -86,33 +93,23 @@ public class Level_03_Login_BasePage_01{
 		dashboardPage= new DashboardPageObject(driver);
 		assertTrue(dashboardPage.isDashboardTitleDisplay());
 	}
+	@Parameters("browser")
 	@BeforeClass
-	public void beforeClass() {
-		System.setProperty("webdriver.chrome.driver",projectLocation+"\\browserDriver\\chromedriver.exe");
-		driver= new ChromeDriver();
+	public void beforeClass(String browser) {
+
+		getBrowserDriver(browser);
 		loginPage= new LoginPageObject(driver);
-		driver.get( "http://automationfc.wordpress.com/wp-admin");
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 	}
 
-	public int getRandom() {
-		Random rand= new Random();
-		return rand.nextInt(99999);
-	}
-	public void sleepInSecond(int second) {
-		try {
-			Thread.sleep(second*1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
+
 	@AfterClass
 	public void afterClass() {
 
 	}
+	@Parameters("url")
 	@BeforeMethod
-	public void beforeMethod() {
-		driver.get("http://automationfc.wordpress.com/wp-admin");
+	public void beforeMethod(String appURL) {
+		driver.get(appURL);
 	}
 }

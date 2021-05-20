@@ -14,12 +14,20 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import pageObjects.NopCommerce.AboutUsPageObject;
+import pageObjects.NopCommerce.NewsPageObject;
+import pageObjects.NopCommerce.PageGeneratorManager;
+import pageObjects.NopCommerce.SiteMapPageObject;
+import pageUis.nopCommerce.BasePageUI;
+
 public class BasePage {
 	
 	public static BasePage getBasePage() {
 		return new BasePage();
 	}
-
+	public String getDynamicLocator(String locator, String... values) {
+		return String.format(locator, (Object[])values);
+	}
 	public void openPageURL(WebDriver driver,String url) {
 		driver.get(url);
 	}
@@ -97,11 +105,17 @@ public class BasePage {
 	public void clickToElement(WebDriver driver, String locator) {
 		 getWebElement(driver, locator).click();
 	}
+	public void clickToElement(WebDriver driver, String locator, String... values) {
+		 getWebElement(driver, getDynamicLocator(locator, values)).click();
+	}
 	public void clickToElement(WebElement element) {
 		 element.click();
 	}
 	public void sendKeyToElement(WebDriver driver, String locator, String value) {
 		getWebElement(driver, locator).sendKeys(value);
+	}
+	public void sendKeyToElement(WebDriver driver, String locator,String value, String...values) {
+		getWebElement(driver, getDynamicLocator(locator, values)).sendKeys(value);
 	}
 	public void selectItemInDropdown(WebDriver driver, String locator, String itemText) {
 		WebElement element= getWebElement(driver, locator);
@@ -144,6 +158,9 @@ public class BasePage {
 	}
 	public String getTextElement(WebDriver driver, String locator) {
 		return getWebElement(driver, locator).getText();
+	}
+	public String getTextElement(WebDriver driver, String locator, String...values) {
+		return getWebElement(driver, getDynamicLocator(locator, values)).getText();
 	}
 	public int getElementSize(WebDriver driver, String locator) {
 		return getWebElements(driver, locator).size();
@@ -280,6 +297,10 @@ public class BasePage {
 		WebDriverWait explicitWait= new WebDriverWait(driver, 30);
 		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(getByXpath(locator)));
 	}
+	public void waitForElementVisible(WebDriver driver, String locator, String...values) {
+		WebDriverWait explicitWait= new WebDriverWait(driver, 30);
+		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(getByXpath(getDynamicLocator(locator, values))));
+	}
 	public void waitForListElementVisble(WebDriver driver, String locator) {
 		WebDriverWait explicitWait= new WebDriverWait(driver, 30);
 		explicitWait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(getByXpath(locator)));
@@ -288,8 +309,50 @@ public class BasePage {
 		WebDriverWait explicitWait= new WebDriverWait(driver, 30);
 		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(locator)));
 	}
+	public void waitForElementInvisible(WebDriver driver, String locator, String...values) {
+		WebDriverWait explicitWait= new WebDriverWait(driver, 30);
+		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(getDynamicLocator(locator, values))));
+	}
 	public void waitForElementClickable(WebDriver driver, String locator) {
 		WebDriverWait explicitWait= new WebDriverWait(driver, 30);
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(locator)));
+	}
+	public void waitForElementClickable(WebDriver driver, String locator, String...values) {
+		WebDriverWait explicitWait= new WebDriverWait(driver, 30);
+		explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(getDynamicLocator(locator, values))));
+	}
+	// commons page
+	public SiteMapPageObject openSiteMapPage(WebDriver driver) {
+		waitForElementClickable(driver, BasePageUI.SITE_MAP_LINK);
+		clickToElement(driver, BasePageUI.SITE_MAP_LINK);
+		return PageGeneratorManager.getSiteMapPage(driver);
+	}
+	public NewsPageObject openNewsPage(WebDriver driver) {
+		waitForElementClickable(driver, BasePageUI.NEWS_LINK);
+		clickToElement(driver,BasePageUI.NEWS_LINK);
+		return PageGeneratorManager.getNewsPage(driver);
+	}
+	public AboutUsPageObject openAboutUsPage(WebDriver driver) {
+		waitForElementClickable(driver, BasePageUI.ABOUT_US_LINK);
+		clickToElement(driver, BasePageUI.ABOUT_US_LINK);
+		return PageGeneratorManager.getAboutUsPage(driver);
+	}
+	// Dynamic Locator - Cach 1- it page
+	public BasePage openFooterPageByName(WebDriver driver, String pageName) {
+		waitForElementClickable(driver, BasePageUI.FOOTER_PAGE_LINK, pageName);
+		clickToElement(driver, BasePageUI.FOOTER_PAGE_LINK, pageName);
+		if(pageName.equals("Sitemap")) {
+			return PageGeneratorManager.getSiteMapPage(driver);
+		}else if(pageName.equals("News")) {
+			return PageGeneratorManager.getNewsPage(driver);
+		}else if(pageName.equals("Aboutus")) {
+			return PageGeneratorManager.getAboutUsPage(driver);
+		}else {
+			throw new RuntimeException("Please input correct page name!");
+		}
+	}
+	public void openDynamicMorePage(WebDriver driver, String pageName) {
+		waitForElementVisible(driver, BasePageUI.FOOTER_PAGE_LINK, pageName);
+		clickToElement(driver, BasePageUI.FOOTER_PAGE_LINK, pageName);
 	}
 }

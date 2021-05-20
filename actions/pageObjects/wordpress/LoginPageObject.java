@@ -1,10 +1,10 @@
-package pageObjects;
+package pageObjects.wordpress;
 
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
-import pageUis.DashboardPageUI;
-import pageUis.LoginPageUI;
+import pageUis.wordpress.DashboardPageUI;
+import pageUis.wordpress.LoginPageUI;
 
 public class LoginPageObject extends BasePage{
 	WebDriver driver;

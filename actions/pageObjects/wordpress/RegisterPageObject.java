@@ -1,4 +1,4 @@
-package pageObjects;
+package pageObjects.wordpress;
 
 public class RegisterPageObject {
 

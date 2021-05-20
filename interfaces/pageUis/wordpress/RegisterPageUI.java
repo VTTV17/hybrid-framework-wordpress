@@ -1,4 +1,4 @@
-package pageUis;
+package pageUis.wordpress;
 
 public class RegisterPageUI {
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Data tabel" parallel="false">
-<parameter name="url" value="http://demo.nopcommerce.com/" />
+<parameter name="url" value="https://www.jqueryscript.net/demo/CRUD-Data-Grid-Plugin-jQuery-Quickgrid/" />
   <test name="Run on chrome">
   <parameter name="browser" value="chrome" />
     <classes>

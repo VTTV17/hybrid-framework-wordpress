@@ -12,14 +12,14 @@ public class CustomerInfoPageObject extends BasePage {
 	}
 	public String getLastNameTextboxValue() {
 		waitForElementVisible(driver, CustomerInfoPageUI.LASTNAME_TEXTBOX);
-		return getTextElement(driver, CustomerInfoPageUI.LASTNAME_TEXTBOX);
+		return getAttributeValue(driver, CustomerInfoPageUI.LASTNAME_TEXTBOX,"value");
 	}
 	public String getFirstNameTextboxValue() {
 		waitForElementVisible(driver, CustomerInfoPageUI.FIRSTNAME_TEXTBOX);
-		return getTextElement(driver, CustomerInfoPageUI.FIRSTNAME_TEXTBOX);
+		return getAttributeValue(driver, CustomerInfoPageUI.FIRSTNAME_TEXTBOX,"value");
 	}
 	public String getEmailTextboxValue() {
 		waitForElementVisible(driver, CustomerInfoPageUI.EMAIL_TEXTBOX);
-		return getTextElement(driver, CustomerInfoPageUI.EMAIL_TEXTBOX);
+		return getAttributeValue(driver, CustomerInfoPageUI.EMAIL_TEXTBOX,"value");
 	}
 }

@@ -2,6 +2,7 @@ package com.nopcommerce.user;
 
 import org.testng.annotations.Test;
 
+import commons.BaseTest;
 import pageObjects.NopCommerce.AboutUsPageObject;
 import pageObjects.NopCommerce.CustomerInfoPageObject;
 import pageObjects.NopCommerce.HomePageObject;
@@ -21,7 +22,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
-public class Level_07_Login_Switch_Page {
+public class Level_07_Login_Switch_Page extends BaseTest{
 	WebDriver driver;
 	String projectLocation= System.getProperty("user.dir");
 	HomePageObject homePage;
@@ -36,7 +37,7 @@ public class Level_07_Login_Switch_Page {
 	@BeforeClass
 	public void beforeClass() {
 		System.setProperty("webdriver.chrome.driver",projectLocation+"\\browserDriver\\chromedriver.exe");
-		driver= new ChromeDriver();
+		driver= getBrowserDriver("chrome");
 				
 		homePage=PageGeneratorManager.getHomePage(driver);
 		driver.get("http://demo.nopcommerce.com/");

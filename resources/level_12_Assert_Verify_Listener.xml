@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+
+<listeners>
+	<listener class-name="commons.MethodListener" />
+</listeners>
+<parameter name="url" value="http://automationfc.wordpress.com/wp-admin"/>
+  <test name="Run on chrome">
+  <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.wordpress.posts.Level_12_Assert_Verify"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Upload multiple file" parallel="false">
+<parameter name="browser" value="chrome"/>
+<parameter name="url" value="https://blueimp.github.io/jQuery-File-Upload/"/>
+  <test name="Run on Chrome">
+    <classes>
+      <class name="com.jquery.table.Level_10_UploadMultipleFile"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -32,5 +32,4 @@ public class HomePageObject extends BasePage {
 		clickToElement(driver,HomePageUI.MY_ACCOUNT_LINK);
 		return generatorManagerPage.getCustomerInfoPage(driver);
 	}
-	
 }

@@ -14,7 +14,7 @@ public class LoginPageObject extends BasePage{
 	}
 
 	public void inputToUsernameTextbox(String value) {
-		waitForElementInvisible(driver, LoginPageUI.USERNAME_EMAIL_TEXTBOX);
+		waitForElementVisible(driver, LoginPageUI.USERNAME_EMAIL_TEXTBOX);
 		sendKeyToElement(driver, LoginPageUI.USERNAME_EMAIL_TEXTBOX, value);
 	}
 

@@ -14,4 +14,19 @@ public class DashboardPageObject extends BasePage {
 		// TODO Auto-generated method stub
 		return isElementDisplayed(driver, DashboardPageUI.DASHBOARD_TITLE);
 	}
+	public void clickToScreenOptionButton() {
+		waitForElementClickable(driver, DashboardPageUI.SCREEN_OPTION_BUTTON);
+		clickToElement(driver, DashboardPageUI.SCREEN_OPTION_BUTTON);
+	}
+	public boolean isActivityCheckboxDisplayed() {
+		waitForElementVisible(driver,  DashboardPageUI.ACTIVITY_CHECKBOX);
+		return isElementDisplayed(driver, DashboardPageUI.ACTIVITY_CHECKBOX);
+	}
+	public boolean isActivityCheckboxUnDisplayed() {
+		waitForElementInvisible(driver, DashboardPageUI.ACTIVITY_CHECKBOX);
+		return isElementDisplayed(driver, DashboardPageUI.ACTIVITY_CHECKBOX);
+	}
+	public boolean isPostSearchTextboxUnDisplayed() {
+		return isElementUndisplayed(driver, DashboardPageUI.POST_SEARCH_TEXTBOX);
+	}
 }

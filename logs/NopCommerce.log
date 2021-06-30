@@ -1,0 +1,9 @@
+[INFO ] [2021-06-30 23:07:26,570] Register - Step 1: Click on Register link
+[INFO ] [2021-06-30 23:07:29,367] Register - Step 2: Input to first name with value: first name
+[INFO ] [2021-06-30 23:07:30,079] Register - Step 3: Input to last name with value: last name
+[INFO ] [2021-06-30 23:07:30,505] Register - Step 4: Input to email with value: test43493@mailnesia.com
+[INFO ] [2021-06-30 23:07:30,987] Register - Step 5: Input to passWord with value: test1234
+[INFO ] [2021-06-30 23:07:31,255] Register - Step 6: Input to comfirm passWord with value: test1234
+[INFO ] [2021-06-30 23:07:31,518] Register - Step 7: Click on Register button
+[INFO ] [2021-06-30 23:07:34,617] Register - Step 8: Verify success message display
+[INFO ] [2021-06-30 23:07:34,736] Register - Step 7: Click on logout link

@@ -10,6 +10,7 @@ import pageObjects.wordpress.LoginPageObject;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 
 import static org.testng.Assert.assertEquals;
@@ -83,7 +84,7 @@ public class Level_04_Login_Multiple_Browser extends BaseTest{
 		String error= loginPage.getInvalidEmailErrorMessage();
 		assertEquals(error.trim(), "Oops, that's not the right password. Please try again!");
 	}
-	@Test
+	
 	public void Login_07_Valid_Email_Password() {
 		loginPage.inputToUsernameTextbox("automationeditor");
 		loginPage.clickToContinueButton();

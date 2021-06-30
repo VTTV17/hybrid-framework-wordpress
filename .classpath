@@ -21,5 +21,10 @@
 	<classpathentry kind="lib" path="LibWebDriverManage/jsoup-1.13.1.jar"/>
 	<classpathentry kind="lib" path="LibWebDriverManage/slf4j-api-1.7.30.jar"/>
 	<classpathentry kind="lib" path="LibWebDriverManage/webdrivermanager-4.2.0.jar"/>
+	<classpathentry kind="lib" path="LibLog4J/commons-codec-1.11.jar"/>
+	<classpathentry kind="lib" path="LibLog4J/commons-io-2.6.jar"/>
+	<classpathentry kind="lib" path="LibLog4J/commons-lang3-3.8.1.jar"/>
+	<classpathentry kind="lib" path="LibLog4J/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="LibLog4J/log4j-1.2.16.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

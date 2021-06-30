@@ -1,7 +1,10 @@
 package commons;
 
+import java.io.File;
+import java.nio.file.FileSystems;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -21,7 +24,8 @@ import pageObjects.NopCommerce.SiteMapPageObject;
 import pageUis.nopCommerce.BasePageUI;
 
 public class BasePage {
-	
+	private long longTimeOut= GlobalConstants.LONG_TIMEOUT;
+	private long shortTimeOut= GlobalConstants.SHORT_TIMEOUT;
 	public static BasePage getBasePage() {
 		return new BasePage();
 	}
@@ -99,6 +103,9 @@ public class BasePage {
 	public List<WebElement> getWebElements(WebDriver driver, String locator) {
 		return driver.findElements(getByXpath(locator));
 	}
+	public List<WebElement> getWebElements(WebDriver driver, String locator, String...values) {
+		return driver.findElements(getByXpath(getDynamicLocator(locator, values)));
+	}
 	public WebElement getWebElement(WebDriver driver, String locator) {
 		return driver.findElement(getByXpath(locator));
 	}
@@ -116,6 +123,20 @@ public class BasePage {
 	}
 	public void sendKeyToElement(WebDriver driver, String locator,String value, String...values) {
 		getWebElement(driver, getDynamicLocator(locator, values)).sendKeys(value);
+	}
+	public void uploadMultipleFile(WebDriver driver, String locator, String...fileNames) {
+		String filePath= System.getProperty("user.dir")+getDirectorySlash("uploadFile");
+		String fullFileName="";
+		for(String file: fileNames) {
+			fullFileName= fullFileName+ filePath+file+"\n";
+		}
+		fullFileName=fullFileName.trim();
+		sendKeyToElement(driver, locator, fullFileName);
+	}
+	public String getDirectorySlash(String folderName) {
+		String separator= FileSystems.getDefault().getSeparator();
+		separator= System.getProperty("file.separator");
+		return File.separator +folderName+ File.separator;
 	}
 	public void selectItemInDropdown(WebDriver driver, String locator, String itemText) {
 		WebElement element= getWebElement(driver, locator);
@@ -165,6 +186,9 @@ public class BasePage {
 	public int getElementSize(WebDriver driver, String locator) {
 		return getWebElements(driver, locator).size();
 	}
+	public int getElementSize(WebDriver driver, String locator, String...values) {
+		return getWebElements(driver, getDynamicLocator(locator, values)).size();
+	}
 	public void checkTheCheckboxOrRadio(WebDriver driver, String locator) {
 		WebElement element= getWebElement(driver, locator);
 		if(!element.isSelected()) {
@@ -179,6 +203,51 @@ public class BasePage {
 	}
 	public boolean isElementDisplayed(WebDriver driver, String locator) {
 		return getWebElement(driver, locator).isDisplayed();
+	}
+	public boolean isControlDisplayed(WebDriver driver, String locator) {
+		boolean status=false;
+		try {
+			status= getWebElement(driver, locator).isDisplayed();
+			return status;
+		} catch (Exception e) {
+			return status;
+		}
+	}
+	public boolean isElementUndisplayed(WebDriver driver, String locator) {
+		overideImplicitTimeout(driver, shortTimeOut);
+		List<WebElement> elements= getWebElements(driver, locator);
+		overideImplicitTimeout(driver, longTimeOut);
+		if(elements.size()==0) {
+			System.out.println("Element not in DOM");
+			return true;
+		}else if(elements.size()>0 && !elements.get(0).isDisplayed()) {
+			System.out.println("Element in DOM but not visible/displayed");
+			return true;
+		}else {
+			System.out.println("Element in DOM and visible/displayed");
+			return false;
+		}
+	}
+	public boolean isElementUndisplayed(WebDriver driver, String locator, String...values) {
+		overideImplicitTimeout(driver, shortTimeOut);
+		List<WebElement> elements= getWebElements(driver, getDynamicLocator(locator, values));
+		overideImplicitTimeout(driver, longTimeOut);
+		if(elements.size()==0) {
+			System.out.println("Element not in DOM");
+			return true;
+		}else if(elements.size()>0 && !elements.get(0).isDisplayed()) {
+			System.out.println("Element in DOM but not visible/displayed");
+			return true;
+		}else {
+			System.out.println("Element in DOM and visible/displayed");
+			return false;
+		}
+	}
+	public void overideImplicitTimeout(WebDriver driver, long timeout) {
+		driver.manage().timeouts().implicitlyWait(timeout, TimeUnit.SECONDS);
+	}
+	public boolean isElementDisplayed(WebDriver driver, String locator, String...values) {
+		return getWebElement(driver, getDynamicLocator(locator, values)).isDisplayed();
 	}
 	public boolean isElementEnabled(WebDriver driver, String locator) {
 		return getWebElement(driver, locator).isEnabled();
@@ -207,6 +276,10 @@ public class BasePage {
 	public void sendKeyBoardToElement(WebDriver driver, String locator, Keys key) {
 		Actions action= new Actions(driver);
 		action.sendKeys(getWebElement(driver, locator), key).perform();
+	}
+	public void sendKeyBoardToElement(WebDriver driver, String locator, Keys key,String...values) {
+		Actions action= new Actions(driver);
+		action.sendKeys(getWebElement(driver,getDynamicLocator(locator, values)), key).perform();
 	}
 	public Object executeForBrowser(WebDriver driver, String javascript) {
 		JavascriptExecutor executor= (JavascriptExecutor)driver;
@@ -345,7 +418,7 @@ public class BasePage {
 			return PageGeneratorManager.getSiteMapPage(driver);
 		}else if(pageName.equals("News")) {
 			return PageGeneratorManager.getNewsPage(driver);
-		}else if(pageName.equals("Aboutus")) {
+		}else if(pageName.equals("About us")) {
 			return PageGeneratorManager.getAboutUsPage(driver);
 		}else {
 			throw new RuntimeException("Please input correct page name!");

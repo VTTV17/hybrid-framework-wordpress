@@ -3,14 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.wordpress.posts.Level_02_Login_BasePage_01">
+      <class name="com.wordpress.posts.Level_11_Login_Element_Undisplay">
         <methods>
+          <include name="Login_02_Element_Displayed"/>
+          <include name="Login_01_Valid_Email_Password"/>
+          <include name="Login_04_Element_Undisplayed_Without_DOM"/>
           <include name="beforeClass"/>
-          <include name="beforeMethod"/>
-          <include name="afterClass"/>
-          <include name="Login_07_Valid_Email_Password"/>
+          <include name="Login_03_Element_Undisplayed_In_DOM"/>
         </methods>
-      </class> <!-- com.wordpress.posts.Level_02_Login_BasePage_01 -->
+      </class> <!-- com.wordpress.posts.Level_11_Login_Element_Undisplay -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

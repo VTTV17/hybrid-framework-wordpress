@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Suite" parallel="false">
+<suite name="Element Undisplay" parallel="false">
+<parameter name="url" value="http://automationfc.wordpress.com/wp-admin"/>
   <test name="Run on chrome">
+  <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.wordpress.posts.Level_01_Login_Wordpress_Yourself"/>
+      <class name="com.wordpress.posts.Level_11_Login_Element_Undisplay"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

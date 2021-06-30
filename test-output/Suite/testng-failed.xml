@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]">
+  <parameter name="url" value="http://automationfc.wordpress.com/wp-admin"/>
+  <listeners>
+    <listener class-name="commons.MethodListener"/>
+  </listeners>
   <test thread-count="5" name="Run on chrome(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.wordpress.posts.Level_01_Login_Wordpress_Yourself">
+      <class name="com.wordpress.posts.Level_12_Assert_Verify">
         <methods>
-          <include name="Login_05_Invalid_Password"/>
           <include name="beforeClass"/>
-          <include name="beforeMethod"/>
-          <include name="Login_04_Empty_Password"/>
-          <include name="afterClass"/>
-          <include name="Login_06_Incorrect_Password"/>
-          <include name="Login_07_Valid_Email_Password"/>
+          <include name="Login_01_Assert"/>
+          <include name="Login_02_Verify"/>
         </methods>
-      </class> <!-- com.wordpress.posts.Level_01_Login_Wordpress_Yourself -->
+      </class> <!-- com.wordpress.posts.Level_12_Assert_Verify -->
     </classes>
   </test> <!-- Run on chrome(failed) -->
 </suite> <!-- Failed suite [Suite] -->

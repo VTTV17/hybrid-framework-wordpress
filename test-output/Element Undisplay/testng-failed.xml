@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Element Undisplay]">
+  <parameter name="url" value="http://automationfc.wordpress.com/wp-admin"/>
+  <test thread-count="5" name="Run on chrome(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.wordpress.posts.Level_11_Login_Element_Undisplay">
+        <methods>
+          <include name="Login_04_Element_Undisplayed_Without_DOM"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.wordpress.posts.Level_11_Login_Element_Undisplay -->
+    </classes>
+  </test> <!-- Run on chrome(failed) -->
+</suite> <!-- Failed suite [Element Undisplay] -->

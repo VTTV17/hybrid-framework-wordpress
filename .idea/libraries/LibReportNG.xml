@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="LibReportNG">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/lib/LibReportNG" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/lib/LibReportNG" recursive="false" />
+  </library>
+</component>

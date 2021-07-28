@@ -1,5 +1,6 @@
 package pageObjects.NopCommerce;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
@@ -13,14 +14,17 @@ public class RegisterPageObject extends BasePage {
 		this.driver=driver;
 		generatorManagerPage= new PageGeneratorManager();
 	}
+	@Step("Input first name with value {0}")
 	public void enterToFirstName(String firstName) {
 		waitForElementVisible(driver, RegisterPageUI.FIRST_NAME_TEXTBOX);
 		sendKeyToElement(driver, RegisterPageUI.FIRST_NAME_TEXTBOX, firstName);
 	}
+	@Step("Input email with value {0}")
 	public void enterToEmailTextbox(String email) {
 		waitForElementVisible(driver, RegisterPageUI.EMAIL_TEXTBOX);
 		sendKeyToElement(driver, RegisterPageUI.EMAIL_TEXTBOX, email);
 	}
+	@Step("Input last name with value")
 	public void enterToLastName(String lastName) {
 		waitForElementVisible(driver, RegisterPageUI.LAST_NAME_TEXTBOX);
 		sendKeyToElement(driver, RegisterPageUI.LAST_NAME_TEXTBOX, lastName);

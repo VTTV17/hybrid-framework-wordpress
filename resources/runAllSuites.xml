@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Run all suites" parallel="false">
+    <suite-files>
+        <suite-file path="runJquery_DataTable.xml"/>
+        <suite-file path="runNopCommerce.xml"/>
+    </suite-files>
+</suite> <!-- Suite -->

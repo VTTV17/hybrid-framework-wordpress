@@ -1,0 +1,24 @@
+<component name="libraryTable">
+  <library name="activation-1.1.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/LibAllureReport/activation-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/LibAllureReport/allure-java-commons-2.14.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/LibAllureReport/allure-model-2.14.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/LibAllureReport/allure-test-filter-2.14.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/LibAllureReport/allure-testng-2.14.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/LibAllureReport/bsh-2.0b6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/LibAllureReport/jackson-annotations-2.12.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/LibAllureReport/jackson-core-2.12.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/LibAllureReport/jackson-databind-2.12.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/LibAllureReport/javax.activation-api-1.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/LibAllureReport/jaxb-api-2.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/LibAllureReport/jcommander-1.72.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/LibAllureReport/joor-java-8-0.9.14.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/LibAllureReport/slf4j-api-1.7.30.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/LibAllureReport/testng-6.14.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/LibAllureReport/tika-core-1.26.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

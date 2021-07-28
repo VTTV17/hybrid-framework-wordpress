@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="bson-3.0.4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/LibExtentReportVer2/bson-3.0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/LibExtentReportVer2/extentreports-2.41.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/LibExtentReportVer2/freemarker-2.3.23.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/LibExtentReportVer2/jsoup-1.8.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/LibExtentReportVer2/mongodb-driver-3.0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/LibExtentReportVer2/mongodb-driver-core-3.0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/LibExtentReportVer2/sqlite-jdbc-3.8.11.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/LibExtentReportVer2/testng-6.9.9.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/LibExtentReportVer2/sqlite-jdbc-3.8.11.1.jar!/" />
+    </SOURCES>
+  </library>
+</component>

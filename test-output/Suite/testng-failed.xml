@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]">
-  <parameter name="url" value="http://automationfc.wordpress.com/wp-admin"/>
   <listeners>
     <listener class-name="commons.MethodListener"/>
+    <listener class-name="reportConfig.AllureTestListener"/>
   </listeners>
   <test thread-count="5" name="Run on chrome(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.wordpress.posts.Level_12_Assert_Verify">
+      <class name="com.nopcommerce.user.Level_14_Login_Page_Allure_Report">
         <methods>
+          <include name="User_02_Login_To_System"/>
           <include name="beforeClass"/>
-          <include name="Login_01_Assert"/>
-          <include name="Login_02_Verify"/>
         </methods>
-      </class> <!-- com.wordpress.posts.Level_12_Assert_Verify -->
+      </class> <!-- com.nopcommerce.user.Level_14_Login_Page_Allure_Report -->
     </classes>
   </test> <!-- Run on chrome(failed) -->
 </suite> <!-- Failed suite [Suite] -->

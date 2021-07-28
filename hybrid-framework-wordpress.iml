@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="EclipseModuleManager">
+    <libelement value="jar://$MODULE_DIR$/lib/selenium-server-standalone-3.9.1.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/testng-6.14.3.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/LibWebDriverManage/commons-codec-1.13.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/LibWebDriverManage/commons-collections4-4.3.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/LibWebDriverManage/commons-compress-1.20.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/LibWebDriverManage/commons-io-2.7.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/LibWebDriverManage/commons-lang3-3.11.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/LibWebDriverManage/gson-2.8.6.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/LibWebDriverManage/httpclient5-5.0.1.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/LibWebDriverManage/httpcore5-5.0.1.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/LibWebDriverManage/jarchivelib-1.0.0.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/LibWebDriverManage/jsoup-1.13.1.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/LibWebDriverManage/slf4j-api-1.7.30.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/LibWebDriverManage/webdrivermanager-4.2.0.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/LibLog4J/commons-codec-1.11.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/LibLog4J/commons-io-2.6.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/LibLog4J/commons-lang3-3.8.1.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/LibLog4J/commons-logging-1.2.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/LibLog4J/log4j-1.2.16.jar!/" />
+    <src_description expected_position="0">
+      <src_folder value="file://$MODULE_DIR$/testcase" expected_position="0" />
+      <src_folder value="file://$MODULE_DIR$/testdata" expected_position="1" />
+      <src_folder value="file://$MODULE_DIR$/actions" expected_position="2" />
+      <src_folder value="file://$MODULE_DIR$/interfaces" expected_position="3" />
+      <src_folder value="file://$MODULE_DIR$/resources" expected_position="4" />
+      <src_folder value="file://$MODULE_DIR$/javaCore" expected_position="5" />
+    </src_description>
+  </component>
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/bin" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/actions" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/interfaces" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/javaCore" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/resources" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/testcase" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/testdata" isTestSource="false" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="module-library">
+      <library name="selenium-server-standalone-3.9.1.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/selenium-server-standalone-3.9.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="testng-6.14.3.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/testng-6.14.3.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-codec-1.13.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/LibWebDriverManage/commons-codec-1.13.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-collections4-4.3.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/LibWebDriverManage/commons-collections4-4.3.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-compress-1.20.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/LibWebDriverManage/commons-compress-1.20.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-io-2.7.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/LibWebDriverManage/commons-io-2.7.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-lang3-3.11.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/LibWebDriverManage/commons-lang3-3.11.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="gson-2.8.6.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/LibWebDriverManage/gson-2.8.6.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="httpclient5-5.0.1.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/LibWebDriverManage/httpclient5-5.0.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="httpcore5-5.0.1.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/LibWebDriverManage/httpcore5-5.0.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jarchivelib-1.0.0.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/LibWebDriverManage/jarchivelib-1.0.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jsoup-1.13.1.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/LibWebDriverManage/jsoup-1.13.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="slf4j-api-1.7.30.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/LibWebDriverManage/slf4j-api-1.7.30.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="webdrivermanager-4.2.0.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/LibWebDriverManage/webdrivermanager-4.2.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-codec-1.11.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/LibLog4J/commons-codec-1.11.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-io-2.6.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/LibLog4J/commons-io-2.6.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-lang3-3.8.1.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/LibLog4J/commons-lang3-3.8.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-logging-1.2.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/LibLog4J/commons-logging-1.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="log4j-1.2.16.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/LibLog4J/log4j-1.2.16.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="selenium-server-standalone-3.141.59" level="project" />
+    <orderEntry type="library" name="LibReportNG" level="project" />
+    <orderEntry type="library" name="commons-codec-1.11" level="project" />
+    <orderEntry type="library" name="commons-codec-1.13" level="project" />
+    <orderEntry type="library" name="bson-3.0.4" level="project" />
+    <orderEntry type="library" name="activation-1.1.1" level="project" />
+    <orderEntry type="library" name="aspectjweaver-1.8.10" level="project" />
+    <orderEntry type="library" name="aspectjweaver-1.9.8.M1" level="project" />
+  </component>
+</module>

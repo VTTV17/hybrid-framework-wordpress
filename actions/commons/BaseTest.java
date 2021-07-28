@@ -162,4 +162,8 @@ public class BaseTest {
 	protected boolean verifyEquals(Object actual, Object expected) {
 		return checkEquals(actual, expected);
 	}
+
+    public WebDriver getDriver() {
+		return driver;
+    }
 }

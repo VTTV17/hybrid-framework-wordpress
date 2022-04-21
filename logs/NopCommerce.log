@@ -106,3 +106,22 @@
 [INFO ] [2021-07-28 23:40:29,073] Register - Step 7: Click on Register button
 [INFO ] [2021-07-28 23:40:30,059] Register - Step 8: Verify success message display
 [INFO ] [2021-07-28 23:40:30,114] Register - Step 7: Click on logout link
+[INFO ] [2021-08-03 22:04:12,853] Pre-condition - Step 1: Open Login Page
+[INFO ] [2021-08-03 22:04:14,760] Pre-Condition - Step 2: Login by cookie
+[INFO ] [2021-08-03 22:04:14,880] Pre-condition - Step 3: Verify my account link displayed
+[INFO ] [2021-08-04 22:35:33,703] Register - Step 1: Click on Register link
+[INFO ] [2021-08-04 22:35:36,598] Register - Step 2: Input to first name with value: first name
+[INFO ] [2021-08-04 22:35:36,718] Register - Step 3: Input to last name with value: last name
+[INFO ] [2021-08-04 22:35:36,821] Register - Step 4: Input to email with value: test82685@mailnesia.com
+[INFO ] [2021-08-04 22:35:36,972] Register - Step 5: Input to passWord with value: test1234
+[INFO ] [2021-08-04 22:35:37,085] Register - Step 6: Input to comfirm passWord with value: test1234
+[INFO ] [2021-08-04 22:35:37,190] Register - Step 7: Click on Register button
+[INFO ] [2021-08-04 22:38:31,355] Register - Step 1: Click on Register link
+[INFO ] [2021-08-04 22:38:34,257] Register - Step 2: Input to first name with value: first name
+[INFO ] [2021-08-04 22:38:34,382] Register - Step 3: Input to last name with value: last name
+[INFO ] [2021-08-04 22:38:34,491] Register - Step 4: Input to email with value: test51700@mailnesia.com
+[INFO ] [2021-08-04 22:38:34,615] Register - Step 5: Input to passWord with value: test1234
+[INFO ] [2021-08-04 22:38:34,722] Register - Step 6: Input to comfirm passWord with value: test1234
+[INFO ] [2021-08-04 22:38:34,826] Register - Step 7: Click on Register button
+[INFO ] [2021-08-04 22:38:38,082] Register - Step 8: Verify success message display
+[INFO ] [2021-08-04 22:38:38,119] Register - Step 7: Click on logout link

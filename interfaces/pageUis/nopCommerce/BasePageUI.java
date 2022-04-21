@@ -7,5 +7,9 @@ public class BasePageUI {
 	public static final String ABOUT_US_LINK="//a[text()='About us']";
 	// có 1 tham số = dynamic page name
 	public static final String FOOTER_PAGE_LINK="//div[@class='footer']//a[text()='%s']";
-	
+	//
+	public static final String DYNAMIC_RADIO_BUTTON_BY_ID="//input[@id='%s']";
+	public static final String DYNAMIC_INPUT_BY_ID="//input[@id='%s']";
+	public static final String DYNAMIC_BUTTON_BY_VALUE="//button[text()='%s']";
+	public static final String DYNAMIC_ERROR_MESSAGE_BY_NAME="//span[@class='field-validation-error']/span[@id='%s-error']";
 }

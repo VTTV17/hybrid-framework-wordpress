@@ -3,8 +3,8 @@ package com.jquery.table;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import pageObject.jQuery.HomePageObject;
-import pageObject.jQuery.PageGeneratorManager;
+import pageObjects.jQuery.HomePageObject;
+import pageObjects.jQuery.PageGeneratorManager;
 import pageUis.jQuery.HomePageUI;
 
 import org.openqa.selenium.WebDriver;

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+<listeners>
+	<listener class-name="commons.MethodListener" />
+<!--    <listener class-name="reportConfig.AllureTestListener"/>-->
+  </listeners>
+  <test name="Run on chrome">
+  <parameter name="browser" value="CHROME_HEADLESS"/>
+    <parameter name="url" value="https://bitly.com/"/>
+    <classes>
+      <class name="com.bitly.Create_ShortLink"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

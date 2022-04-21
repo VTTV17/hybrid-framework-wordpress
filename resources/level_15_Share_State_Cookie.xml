@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+
+<listeners>
+	<listener class-name="commons.MethodListener" />
+    <listener class-name="reportConfig.AllureTestListener"/>
+  </listeners>
+  <test name="Run on chrome">
+  <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.nopcommerce.common.Common_01_Register" />
+      <class name="com.nopcommerce.user.Level_15_Login_Page_Share_State_1_Search"/>
+      <class name="com.nopcommerce.user.Level_15_Login_Page_Share_State_2_Sort"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

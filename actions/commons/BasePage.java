@@ -2,8 +2,7 @@ package commons;
 
 import java.io.File;
 import java.nio.file.FileSystems;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -370,6 +369,10 @@ public class BasePage {
 		WebDriverWait explicitWait= new WebDriverWait(driver, 30);
 		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(getByXpath(locator)));
 	}
+	public void waitForElementDisplay(WebDriver driver, String locator) {
+		WebDriverWait explicitWait= new WebDriverWait(driver, 30);
+		explicitWait.until(ExpectedConditions.presenceOfElementLocated(getByXpath(locator)));
+	}
 	public void waitForElementVisible(WebDriver driver, String locator, String...values) {
 		WebDriverWait explicitWait= new WebDriverWait(driver, 30);
 		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(getByXpath(getDynamicLocator(locator, values))));
@@ -424,8 +427,126 @@ public class BasePage {
 			throw new RuntimeException("Please input correct page name!");
 		}
 	}
+	//Nopcommerce project
 	public void openDynamicMorePage(WebDriver driver, String pageName) {
 		waitForElementVisible(driver, BasePageUI.FOOTER_PAGE_LINK, pageName);
 		clickToElement(driver, BasePageUI.FOOTER_PAGE_LINK, pageName);
+	}
+	//Pattern Object
+	public void clickToRadiobuttonByID(WebDriver driver,String radioButtonID){
+		waitForElementClickable(driver,BasePageUI.DYNAMIC_RADIO_BUTTON_BY_ID,radioButtonID);
+		clickToElement(driver,BasePageUI.DYNAMIC_RADIO_BUTTON_BY_ID,radioButtonID);
+	}
+	public void inputToTextboxByID(WebDriver driver, String textboxID, String value){
+		waitForElementVisible(driver,BasePageUI.DYNAMIC_INPUT_BY_ID,textboxID);
+		sendKeyToElement(driver,BasePageUI.DYNAMIC_INPUT_BY_ID,value,textboxID);
+	}
+	public void clickToButtonByValue(WebDriver driver,String button){
+		waitForElementClickable(driver,BasePageUI.DYNAMIC_BUTTON_BY_VALUE,button);
+		clickToElement(driver,BasePageUI.DYNAMIC_BUTTON_BY_VALUE,button);
+	}
+	public String getErrorMessageAtMandantoryFieldByID(WebDriver driver,String fieldID){
+		waitForElementVisible(driver,BasePageUI.DYNAMIC_ERROR_MESSAGE_BY_NAME,fieldID);
+		return getTextElement(driver,BasePageUI.DYNAMIC_ERROR_MESSAGE_BY_NAME,fieldID);
+	}
+	//OrangeHRM project
+	public void openDynamicMenuLink(WebDriver driver, String pageName) {
+		waitForElementVisible(driver, pageUis.OrangeHRM.BasePageUI.DYNAMIC_MENU_LINK, pageName);
+		clickToElement(driver, pageUis.OrangeHRM.BasePageUI.DYNAMIC_MENU_LINK, pageName);
+	}
+	public boolean isDataStringSortAscending(WebDriver driver, String locator){
+		ArrayList<String> arrayList= new ArrayList<>();
+		List<WebElement> elementList=driver.findElements(By.xpath(locator));
+		for (WebElement element:elementList){
+			arrayList.add(element.getText());
+		}
+		System.out.println("----Dữ liệu trên UI----");
+		for (String name:arrayList){
+			System.out.println(name);
+		}
+		ArrayList<String> sortedList = new ArrayList<>();
+		for(String child:arrayList){
+			sortedList.add(child);
+		}
+		//Sort
+		Collections.sort(sortedList);
+		System.out.println("---Dữ liệu đã sort---");
+		for (String name: sortedList){
+			System.out.println(name);
+		}
+		return sortedList.equals(arrayList);
+	}
+	public boolean isDataStringSortDecending(WebDriver driver, String locator){
+		ArrayList<String> arrayList= new ArrayList<>();
+		List<WebElement> elementList=driver.findElements(By.xpath(locator));
+		for (WebElement element:elementList){
+			arrayList.add(element.getText());
+		}
+		System.out.println("----Dữ liệu trên UI----");
+		for (String name:arrayList){
+			System.out.println(name);
+		}
+		ArrayList<String> sortedList = new ArrayList<>();
+		for(String child:arrayList){
+			sortedList.add(child);
+		}
+		//Sort
+		Collections.sort(sortedList);
+		Collections.reverse(sortedList);
+		System.out.println("---Dữ liệu đã sort---");
+		for (String name: sortedList){
+			System.out.println(name);
+		}
+		return sortedList.equals(arrayList);
+	}
+	public boolean isDataFloatSortAscending(WebDriver driver, String locator){
+		ArrayList<Float> arrayList= new ArrayList<>();
+		List<WebElement> elementList=driver.findElements(By.xpath(locator));
+		for (WebElement element:elementList){
+			arrayList.add(Float.parseFloat(element.getText().replace("$","").trim()));
+		}
+		System.out.println("----Dữ liệu trên UI----");
+		for (Float name:arrayList){
+			System.out.println(name);
+		}
+		ArrayList<Float> sortedList = new ArrayList<>();
+		for(Float child:arrayList){
+			sortedList.add(child);
+		}
+		//Sort
+		Collections.sort(sortedList);
+		System.out.println("---Dữ liệu đã sort---");
+		for (Float name: sortedList){
+			System.out.println(name);
+		}
+		return sortedList.equals(arrayList);
+	}
+	public boolean isDataFloatSortDescending(WebDriver driver, String locator){
+		ArrayList<Float> arrayList= new ArrayList<>();
+		List<WebElement> elementList=driver.findElements(By.xpath(locator));
+		for (WebElement element:elementList){
+			arrayList.add(Float.parseFloat(element.getText().replace("$","").trim()));
+		}
+		System.out.println("----Dữ liệu trên UI----");
+		for (Float name:arrayList){
+			System.out.println(name);
+		}
+		ArrayList<Float> sortedList = new ArrayList<>();
+		for(Float child:arrayList){
+			sortedList.add(child);
+		}
+		//Sort DESC
+		Collections.sort(sortedList);
+		System.out.println("---Dữ liệu đã sort---");
+		for (Float name: sortedList){
+			System.out.println(name);
+		}
+		//Sort DESC
+		Collections.reverse(sortedList);
+		System.out.println("---Dữ liệu đã sort---");
+		for (Float name: sortedList){
+			System.out.println(name);
+		}
+		return sortedList.equals(arrayList);
 	}
 }

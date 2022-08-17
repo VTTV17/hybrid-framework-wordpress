@@ -552,4 +552,7 @@ public class BasePage {
 	public void test(){
 
 	}
+	public void hhh(){
+
+	}
 }

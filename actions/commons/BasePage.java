@@ -553,7 +553,7 @@ public class BasePage {
 	public void new()
 
 	{
-		
+
 	}
 	public void test(){
 

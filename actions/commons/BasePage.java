@@ -549,6 +549,13 @@ public class BasePage {
 		}
 		return sortedList.equals(arrayList);
 	}
-	public void new(){
+
+	public void new()
+
+	{
+		
+	}
+	public void test(){
+
 	}
 }
